@@ -1,0 +1,10 @@
+{% block content %}
+	<h2>Add an alarm</h2>
+	<form action="{{ url_for('new_alarm') }}" method=post>
+		<div>{{ form.name.label }} {{ form.name(size=20) }} {{ form.hour() }} {{ form.minute()}}</div>
+		<div>{{ form.mode() }}</div>
+
+		<input type="submit" value="Go">
+		<a href="alarms">back</a>
+	</form>
+{% endblock %}

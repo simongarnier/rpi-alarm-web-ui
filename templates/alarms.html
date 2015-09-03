@@ -1,0 +1,17 @@
+<h2>Alarms</h2>
+<table>
+	<tr>
+		<th>name</th>
+		<th>time</th>
+		<th>mode</th>
+		<th><a href="alarm/new">new</a></th>
+	<tr>
+	{% for (key, alarm) in alarms %}
+	   <tr>
+	        <td> {{ alarm['name'] }} </td>
+	        <td> {{ alarm['hour']+":"+ alarm['minute']}}  </td>
+	        <td> {{ alarm['mode'] }}  </td>
+	        <td> <a href="alarm/{{ key }}">delete</a></td>
+	   </tr>
+	{% endfor %}
+</table>
